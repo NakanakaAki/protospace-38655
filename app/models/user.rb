@@ -5,6 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   validates :name, presence: true
+  validates :password, presence: true
+  validates :profile, presence: true
+  validates :occupation, presence: true
+  validates :postion, presence: true
 
   has_many :prototypes
   has_many :comments
